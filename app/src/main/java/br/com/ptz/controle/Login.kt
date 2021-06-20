@@ -20,7 +20,7 @@ class Login : AppCompatActivity() {
         // Variavel local que contém o Click do Button
         val BTNlogin = findViewById<Button>(R.id.button) as Button
         // Fazendo uso do Biblioteca Intent
-        var LoginSistemaintent = Intent(this, SistemaMainActivity::class.java).apply{
+        var LoginSistemaintent = Intent(this, Login::class.java).apply{
             // Aqui devo Implementar o bloco de comando caso necessário
 
         }
