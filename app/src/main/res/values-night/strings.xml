@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="textView">ResultadoBuscaDBA</string>
+    <string name="button">Buscar</string>
+    <string name="textView2">ErroSQL</string>
+</resources>
