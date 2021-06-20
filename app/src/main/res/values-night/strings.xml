@@ -2,5 +2,5 @@
 <resources>
     <string name="textView" translatable="false">ResultadoBuscaDBA</string>
     <string name="button" translatable="false">Buscar</string>
-    <string name="textView2" translatable="false">ErroSQL</string>
+    <string name="textView2" translatable="false">SemErroSQL</string>
 </resources>
