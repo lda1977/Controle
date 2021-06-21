@@ -1,5 +1,4 @@
 package br.com.ptz.controle
-
 import android.content.Intent
 import android.os.AsyncTask
 import android.support.v7.app.AppCompatActivity
@@ -10,27 +9,21 @@ import android.widget.TextView
 
 import java.lang.Exception
 import java.sql.DriverManager
-
 const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.sistema.MESSAGEEMAIL"
 const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.sistema.MESSAGESENHA"
-
+const val EXTRA_MESSAGE_NOME = "br.com.ptz.controle.sistema.MESSAGENOME"
 class Login : AppCompatActivity() {
-
     var text: TextView? = null
     var errorText: TextView? = null
     var show: Button? = null
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
         text = findViewById<View>(R.id.textView) as TextView
         errorText = findViewById<View>(R.id.textView2) as TextView
         show = findViewById<Button>(R.id.button) as Button
         show!!.setOnClickListener { Task().execute() }
     }
-
     internal inner class Task : AsyncTask<Void?, Void?, Void?>() {
         var records = ""
         var error = ""
@@ -39,26 +32,21 @@ class Login : AppCompatActivity() {
                 Class.forName("com.mysql.jdbc.Driver")
                 val connection = DriverManager.getConnection("jdbc:mysql://192.168.1.164:3306/fornecedor", "andro", "andro")
                 val statement = connection.createStatement()
-                val resultSet = statement.executeQuery("SELECT Email, Nome\n" +
+                val resultSet = statement.executeQuery("SELECT Email, Senha, Nome\n" +
                         "FROM `fornecedor`.`user` ORDER BY Nome")
                 while(resultSet.next()){
-                    records += """${resultSet.getString(1)} ${resultSet.getString(2)} 
+                    records += """${resultSet.getString(1)} ${resultSet.getString(2)} ${resultSet.getString(3)} 
 """
                 }
-
             } catch (e: Exception) {
                 error = e.toString()
             }
             return null
         }
-
         override fun onPostExecute(aVoid: Void?) {
             text!!.text = records
             if (error !== "") errorText!!.text = error
             super.onPostExecute(aVoid)
         }
     }
-
-
-
 }

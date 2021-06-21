@@ -95,15 +95,15 @@ class FullscreenActivity : AppCompatActivity() {
 
 
     // Implementando a função publica ClickbtnEntrada
-    public fun ClickBTNentrada(view: View){
+    public fun ClickBTNentrada(BTNfoiClicado: View){
         // Variavel local que contém o Click do Button
-        val BTNentrada = findViewById<Button>(R.id.dummy_button) as Button
+        //val BTNentrada = findViewById<Button>(R.id.dummy_button) as Button
         // Fazendo uso do Biblioteca Intent
-        var LoginEntradaintent = Intent(this, Login::class.java).apply{
+        val BTNfoiClicado = Intent(this, Login::class.java).apply{
             // Aqui devo Implementar o bloco de comando caso necessário
 
         }
-        startActivity(LoginEntradaintent)
+        startActivity(BTNfoiClicado)
     }
 
     ///////////////////////////////////////////////////////
