@@ -23,6 +23,7 @@ class Login : AppCompatActivity() {
         errorText = findViewById<View>(R.id.textView2) as TextView
         show = findViewById<Button>(R.id.button) as Button
         show!!.setOnClickListener { Task().execute() }
+
     }
     internal inner class Task : AsyncTask<Void?, Void?, Void?>() {
         var records = ""
