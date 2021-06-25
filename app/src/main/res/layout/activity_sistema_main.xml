@@ -53,41 +53,6 @@
 
             </TextView>
 
-            <TextView
-                android:id="@+id/txtInformativo"
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:gravity="center_horizontal"
-                android:text="@string/txtInformacao"
-                android:textAlignment="center"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/btnPreco"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="12dp"
-                android:background="@color/purple_200"
-                android:drawableEnd="@drawable/ic_baseline_send_24"
-                android:drawableRight="@drawable/ic_baseline_send_24"
-                android:gravity="center"
-                android:shadowColor="#9E2424"
-                android:text="@string/btnPreco"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_reslta"
-                android:layout_width="match_parent"
-                android:layout_height="504dp"
-                android:background="#C7F1CE"
-                android:gravity="center"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent" />
         </LinearLayout>
 
     </ScrollView>

@@ -18,6 +18,6 @@
     <string name="txtResultadoConsulta">Consulta ao Sql</string>
     <string name="btnPreco">Preço</string>
     <string name="txtResulEmail">Resultado da consulta ao E-mail.</string>
-
-
+    <string name="USENAMEold">t@t.gmail.com</string>
+    <string name="PASSAWORD_old">123</string>
 </resources>

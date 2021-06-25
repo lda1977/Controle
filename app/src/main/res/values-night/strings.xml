@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="textView" translatable="false">ResultadoBuscaDBA</string>
-    <string name="button" translatable="false">Buscar</string>
-    <string name="textView2" translatable="false">SemErroSQL</string>
+    <string name="app_name" translatable="false">Controle</string>
+    <string name="app_name_restrito">..:: Acesso Restrito ::..</string>
+    <string name="dummy_button" translatable="false">...:: Click para Entrar ::...</string>
+    <string name="dummy_content" translatable="false">SISTEMA APP\n\nCONTROLE\n\nDOS\nITENS ESTOQUE</string>
+    <string name="textView">ResultadoBuscaDBA</string>
+    <string name="button">Buscar</string>
+    <string name="textView2">SemErroSQL</string>
+    <string name="nav_sair" translatable="false">Sair</string>
+    <string name="txtEmail">..:: Digite o E-mail ::..</string>
+    <string name="imgLogo">Logo Marca</string>
+    <string name="txtPassWord">..:: Digite a Senha ::..</string>
+    <string name="txtemail">E-mail:</string>
+    <string name="txtpassword">Senha:</string>
+    <string name="btnLogar">logar</string>
+    <string name="txtBemVindo">Seja bem vindo Fornecedor!</string>
+    <string name="txtInformacao">Aqui você vai efetuar a seleção de um Item por vez! No qual sua empresa é fornecedora.</string>
+    <string name="txtResultadoConsulta">Consulta ao Sql</string>
+    <string name="btnPreco">Preço</string>
+    <string name="txtResulEmail">Resultado da consulta ao E-mail.</string>
+    <string name="USENAMEold">t@t.gmail.com</string>
+    <string name="PASSAWORD_old">123</string>
 </resources>
