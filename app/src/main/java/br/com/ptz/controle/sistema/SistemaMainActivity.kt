@@ -15,10 +15,17 @@ class SistemaMainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sistema_main)
 
 
+        val stringU: String
+        stringU = getString(R.string.USENAMEold)
+        val stringP: String
+        stringP = getString(R.string.PASSAWORD_old)
+
+
         // Criando Button
-        val BTNPreco = findViewById<Button>(R.id.btnPreco) as Button
+//        val BTNPreco = findViewById<Button>(R.id.btnPreco) as Button
 
         // Chamando onclicklistenner
+        /*
         BTNPreco.setOnClickListener {
             val Sistemaintent = Intent(this, SistemaMainActivity::class.java).apply {
             }
@@ -31,5 +38,8 @@ class SistemaMainActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.txtResulEmail).apply {
             text = message
         }
+    }
+
+   */
     }
 }

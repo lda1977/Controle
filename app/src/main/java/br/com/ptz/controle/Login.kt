@@ -12,12 +12,13 @@ import br.com.ptz.controle.sistema.SistemaMainActivity
 import java.*
 import java.lang.Exception
 import java.sql.DriverManager
+import android.widget.Toast.makeText as makeTextEmail
 
-/**
- * const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.MESSAGEEMAIL"
- * const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.MESSAGESENHA"
- * const val EXTRA_MESSAGE_NOME = "br.com.ptz.controle.MESSAGENOME"
-*/
+
+  const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.MESSAGEEMAIL"
+  const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.MESSAGESENHA"
+  const val EXTRA_MESSAGE_NOME = "br.com.ptz.controle.MESSAGENOME"
+
 class Login : AppCompatActivity() {
 
     var text: TextView? = null
@@ -32,14 +33,14 @@ class Login : AppCompatActivity() {
         text = findViewById<View>(R.id.textView) as TextView
         errorText = findViewById<View>(R.id.textView2) as TextView
         show = findViewById<Button>(R.id.button) as Button
-        show!!.setOnClickListener { Task().execute() }
+        //show!!.setOnClickListener { Task().execute() }
 
         // Criando Button
-        //val EntranoSistema = findViewById<Button>(R.id.btnLogar) as Button
+        val EntranoSistema = findViewById<Button>(R.id.btnLogar) as Button
 
         // Chamando onclicklistenner
-        //EntranoSistema.setOnClickListener {
-    /*
+        EntranoSistema.setOnClickListener {
+
             // Pegando o conteudo dos campos txtInpEmail e txtInpPassword
             val tLogin = findViewById<View>(R.id.txtInpEmail) as TextView  // Que é o testo Login
             val tSenha = findViewById<View>(R.id.txtInpPassword) as TextView  // Que é o testo Senha
@@ -51,7 +52,7 @@ class Login : AppCompatActivity() {
             // Aqui vou chamara o DBA
 
             // Chamando a função setOnClickListener
-            show!!.setOnClickListener { Task().execute() }
+            //show!!.setOnClickListener { Task().execute() }
 
             // Variáveis de Resultado do DBA
             val ResultadoLoginDBA = login
@@ -64,11 +65,12 @@ class Login : AppCompatActivity() {
                 val message = tLogin.text.toString()
                 val messageP = tSenha.text.toString()
 
-                val intent = Intent(this, SistemaMainActivity::class.java).apply {
-                    putExtra(EXTRA_MESSAGE, message)
-                    putExtra(EXTRA_MESSAGE, messageP)
+                val intentLogin = Intent(this, SistemaMainActivity::class.java).apply {
+                    putExtra(EXTRA_MESSAGE_EMAIL, message)
+                    putExtra(EXTRA_MESSAGE_SENHA, messageP)
+
                 }
-                startActivity(intent)
+                startActivity(intentLogin)
 
             }else{
                 ALERTA("Erro!!! Login ou Senha incorretos, tente novamente!!!")
@@ -76,17 +78,19 @@ class Login : AppCompatActivity() {
         }
 
 
-        show!!.setOnClickListener { Task().execute() }
+        //show!!.setOnClickListener { Task().execute() }
 
-     */
     }
-/*
+
     // Criando a função de ALERTA
     private fun ALERTA ( ResultadoLogin: String){
         // Aqui vou verificar se foi logado com sucesso ou não
-        Toast.makeText(this, ResultadoLogin, Toast.LENGTH_LONG).show()
+        makeTextEmail(this, ResultadoLogin, Toast.LENGTH_LONG).show()
     }
-*/
+
+
+
+    /*
     internal inner class Task : AsyncTask<Void?, Void?, Void?>() {
         var records = ""
         var error = ""
@@ -112,4 +116,7 @@ class Login : AppCompatActivity() {
             super.onPostExecute(aVoid)
         }
     }
+
+
+     */
 }

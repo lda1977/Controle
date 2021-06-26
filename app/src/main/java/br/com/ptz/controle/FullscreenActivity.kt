@@ -14,9 +14,6 @@ import android.widget.TextView
 import android.widget.Toast
 import br.com.ptz.controle.databinding.ActivityFullscreenBinding
 
-const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.*.MESSAGEEMAIL"
-const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.*.MESSAGESENHA"
-const val EXTRA_MESSAGE_NOME = "br.com.ptz.controle.*.MESSAGENOME"
 
 class FullscreenActivity : AppCompatActivity() {
 
