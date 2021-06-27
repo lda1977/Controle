@@ -72,7 +72,7 @@
                                 android:layout_height="match_parent">
 
                                 <android.support.design.widget.TextInputEditText
-                                    android:id="@+id/txtInpEmail"
+                                    android:id="@+id/txtDigEmail"
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:drawableStart="@drawable/ic_baseline_email_24"
@@ -80,6 +80,32 @@
                                     android:hint="@string/txtemail"
                                     android:singleLine="true" />
                             </android.support.design.widget.TextInputLayout>
+
+
+                            <TextView
+                                android:id="@+id/txtDigitadoEmail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/txtPassWord" />
+
+                            <android.support.design.widget.TextInputLayout
+                                android:id="@+id/txtInputPassWord"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity=""
+                                app:passwordToggleEnabled="true">
+
+                                <android.support.design.widget.TextInputEditText
+                                    android:id="@+id/DigitadoPass"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:drawableStart="@drawable/ic_lock_24"
+                                    android:drawableLeft="@drawable/ic_lock_24"
+                                    android:hint="@string/txtpassword"
+                                    android:password="true"
+                                    android:singleLine="true"/>
+                            </android.support.design.widget.TextInputLayout>
+
 
                             <Button
                                 android:id="@+id/btnLogar"
@@ -90,6 +116,7 @@
                                 android:drawableLeft="@drawable/ic_baseline_send_24"
                                 android:drawableEnd="@drawable/ic_login"
                                 android:drawableRight="@drawable/ic_login"
+                                android:onClick="aoClickMSG"
                                 android:text="@string/btnLogar"
                                 android:textColor="#FFFFFF" />
 

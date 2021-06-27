@@ -22,4 +22,6 @@
     <string name="USENAMEold">t@t.gmail.com</string>
     <string name="PASSAWORD_old">123</string>
     <string name="txtResultIF_ELSE">Result</string>
+    <string name="resultPASS">PASS</string>
+    <string name="ResulttextView">TextView</string>
 </resources>
