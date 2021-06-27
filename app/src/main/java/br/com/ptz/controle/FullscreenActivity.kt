@@ -15,6 +15,8 @@ import android.widget.Toast
 import br.com.ptz.controle.databinding.ActivityFullscreenBinding
 
 
+
+
 class FullscreenActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityFullscreenBinding
