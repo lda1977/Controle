@@ -10,5 +10,10 @@ class Fornecedor : AppCompatActivity() {
         setContentView(R.layout.activity_fornecedor)
 
 
+
+
+
+
+
     }
 }
