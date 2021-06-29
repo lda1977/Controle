@@ -13,9 +13,6 @@ import br.com.ptz.controle.sistema.SistemaMainActivity
 const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.MESSAGEEMAIL"
 const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.MESSAGESENHA"
 
-
-
-
 class Login : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -76,10 +73,25 @@ class Login : AppCompatActivity() {
         val MSGemail = emaileditText.text.toString()
         val MSGsenha = senhaeditText.text.toString()
 
-        val loginintent = Intent(this, SistemaMainActivity::class.java).apply {
-            putExtra(EXTRA_MESSAGE_EMAIL, MSGemail)
-            putExtra(EXTRA_MESSAGE_SENHA, MSGsenha)
+        if(MSGemail == "teste"){
+            // Chamar tela sistema e print "SUCESSO ACESSAR O SISTEMA"
+            Toast.makeText(this, "Login com SUCESSO vamos para tela Sistema", Toast.LENGTH_LONG).show()
+            // Fazendo uso da Bibliote Intent
+            val loginintent = Intent(this, SistemaMainActivity::class.java).apply {
+                putExtra(EXTRA_MESSAGE_EMAIL, MSGemail)
+                putExtra(EXTRA_MESSAGE_SENHA, MSGsenha)
+            }
+            startActivity(loginintent)
+
+        }else{
+            // Erro de Login
+            // Chamar tela Login e print "Erro E-mail"
+            Toast.makeText(this, "Erro! De E-mail digitado esta errado. Tentente novamente!", Toast.LENGTH_LONG).show()
+            // Fazendo uso da Bibliote Intent
+            val Errorloginintent = Intent(this, Login::class.java).apply {
+                putExtra(EXTRA_MESSAGE_EMAIL, MSGemail)
+            }
+            startActivity(Errorloginintent)
         }
-        startActivity(loginintent)
     }
 }
