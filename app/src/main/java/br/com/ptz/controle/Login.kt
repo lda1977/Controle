@@ -56,10 +56,6 @@ class Login : AppCompatActivity() {
         * */
 
 
-
-
-
-
         mySnackbar.show()
     }
 
