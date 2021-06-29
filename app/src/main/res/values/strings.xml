@@ -23,4 +23,6 @@
     <string name="txtResultIF_ELSE">Result</string>
     <string name="resultPASS">PASS</string>
     <string name="ResulttextView">TextView</string>
+    <string name="email_archived">Quaze no Sistema</string>
+    <string name="undo_string">Basta fazer o Login</string>
 </resources>

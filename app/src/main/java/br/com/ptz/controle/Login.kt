@@ -3,17 +3,18 @@ package br.com.ptz.controle
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.design.widget.Snackbar
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import br.com.ptz.controle.sistema.SistemaMainActivity
-import java.lang.Exception
-import java.sql.DriverManager
-import java.sql.SQLException
 
 // Variáveis Constante declaradas
 const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.MESSAGEEMAIL"
 const val EXTRA_MESSAGE_SENHA = "br.com.ptz.controle.MESSAGESENHA"
+
+
+
 
 class Login : AppCompatActivity() {
 
@@ -22,8 +23,52 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         // Fazendo impressão com a biblioteca Toast
-        Toast.makeText(this, "..:: Tela LOGIN!", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(this, "..:: Tela LOGIN!", Toast.LENGTH_SHORT).show()
 
+
+
+        // Crie um objeto Snackbar chamando o método estático Snackbar.make().
+        // Durante a criação do Snackbar, você especifica:
+        //  a mensagem exibida e a quantidade de tempo pela qual ela será exibida.
+                //val mySnackbar = Snackbar.make(view, stringId, duration)
+
+        val mySnackbar = Snackbar.make(findViewById(R.id.btnLogar),
+            R.string.email_archived, Snackbar.LENGTH_LONG)
+
+        mySnackbar.setAction(R.string.undo_string, MyUndoListener())
+
+        // Exemplo
+        /*     val mySnackbar = Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+                                   R.string.email_archived, Snackbar.LENGTH_SHORT)
+                mySnackbar.setAction(R.string.undo_string, MyUndoListener())
+         */
+
+        /*
+        * view
+        * A visualização à qual o Snackbar será anexado. Na verdade, o método pesquisa a hierarquia de visualizações desde a view transmitida até chegar a um CoordinatorLayout ou à visualização de conteúdo da decoração da janela. Normalmente, é mais simples transmitir apenas o CoordinatorLayout que envolve seu conteúdo.
+        *
+        * stringId
+        * O ID do recurso da mensagem que você quer exibir. Pode ser um texto formatado ou não formatado.
+        *
+        * duration
+        * O período de exibição da mensagem. Pode ser LENGTH_SHORT ou LENGTH_LONG.
+        *
+        * */
+
+
+
+
+
+
+        mySnackbar.show()
+    }
+
+
+    class MyUndoListener : View.OnClickListener {
+
+        override fun onClick(v: View) {
+            // Code to undo the user's last action
+        }
     }
 
     // Função responsavel pelo onClick do Button btnLogar
