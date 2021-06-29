@@ -3,6 +3,7 @@ package br.com.ptz.controle.sistema
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import br.com.ptz.controle.EXTRA_MESSAGE_EMAIL
 import br.com.ptz.controle.EXTRA_MESSAGE_SENHA
 import br.com.ptz.controle.R
@@ -11,6 +12,9 @@ class SistemaMainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sistema_main)
+
+        // Fazendo impressão com a biblioteca Toast
+        Toast.makeText(this, "..:: Tela Sistema!!!", Toast.LENGTH_LONG).show()
 
         // Variaveis
         val stringU: String
@@ -33,6 +37,7 @@ class SistemaMainActivity : AppCompatActivity() {
         val textViewSenha = findViewById<TextView>(R.id.ResltSENHAtextView2).apply {
             text = MSGmessageSenha
         }
+
 
     }
 }
