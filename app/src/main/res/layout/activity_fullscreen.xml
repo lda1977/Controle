@@ -44,6 +44,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:drawableStart="@drawable/ic_baseline_send_24"
+                android:drawableEnd="@drawable/ic_login_24"
                 android:onClick="ClickBTNentrada"
                 android:text="@string/dummy_button" />
 
