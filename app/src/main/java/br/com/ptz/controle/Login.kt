@@ -7,7 +7,11 @@ import android.support.design.widget.Snackbar
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import br.com.ptz.controle.sistema.ConectDBAcontrole
 import br.com.ptz.controle.sistema.SistemaMainActivity
+import java.sql.*
+import java.sql.DriverManager.getConnection
+import java.util.*
 
 // Variáveis Constante declaradas
 const val EXTRA_MESSAGE_EMAIL = "br.com.ptz.controle.MESSAGEEMAIL"
@@ -18,6 +22,11 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        ConectDBAcontrole()
+
+        getConnection()
+        // execute the query via connection object
+        //executeMySQLQuery()
 
         // Fazendo impressão com a biblioteca Toast
         //Toast.makeText(this, "..:: Tela LOGIN!", Toast.LENGTH_SHORT).show()
@@ -76,6 +85,12 @@ class Login : AppCompatActivity() {
         if(MSGemail == "teste"){
             // Chamar tela sistema e print "SUCESSO ACESSAR O SISTEMA"
             Toast.makeText(this, "Login com SUCESSO vamos para tela Sistema", Toast.LENGTH_LONG).show()
+            ConectDBAcontrole()
+
+            getConnection()
+            // execute the query via connection object
+            //executeMySQLQuery()
+
             // Fazendo uso da Bibliote Intent
             val loginintent = Intent(this, SistemaMainActivity::class.java).apply {
                 putExtra(EXTRA_MESSAGE_EMAIL, MSGemail)
@@ -92,6 +107,31 @@ class Login : AppCompatActivity() {
                 putExtra(EXTRA_MESSAGE_EMAIL, MSGemail)
             }
             startActivity(Errorloginintent)
+        }
+    }
+
+    /*
+    *
+    * */
+
+    val connectionProps = Properties()
+    internal var conn: Connection? = null
+    // make a connection to MySQL Server
+
+    fun getConnection() {
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver")
+            val conn = DriverManager.getConnection("jdbc:mysql://192.168.1.164:3306/fornecedor", "andro", "andro")
+            val statement = conn.createStatement()
+            val resultSet = statement.executeQuery("SELECT * FROM fornecedor.user")
+
+        } catch (e: SQLException) {
+            // handle any errors
+            e.printStackTrace()
+        } catch (e: Exception) {
+            // handle any errors
+            e.printStackTrace()
         }
     }
 }
