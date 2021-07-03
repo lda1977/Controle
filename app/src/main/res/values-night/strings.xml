@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <resources>
-
-
     <string name="app_name" translatable="false">Controle</string>
     <string name="app_name_restrito">..:: Acesso Restrito ::..</string>
+    <string name="app_name_fornecedor">..:: Fornecedor ::..</string>
+    <string name="app_name_sistema">..:: Bem vindo ao Sistema ::..</string>
     <string name="dummy_button" translatable="false">...:: Click para Entrar ::...</string>
     <string name="dummy_content" translatable="false">SISTEMA APP\n\nCONTROLE\n\nDOS\nITENS ESTOQUE</string>
-    <string name="textView">ResultadoBuscaDBA</string>
+    <string name="textView">Resultado da Busca no Bando de Dados!</string>
     <string name="nav_sair" translatable="false">Sair</string>
     <string name="txtEmail">..:: Digite o E-mail ::..</string>
     <string name="imgLogo">Logo Marca</string>
@@ -29,5 +28,4 @@
     <string name="undo_string">..:: Basta fazer o Login</string>
     <string name="button">Buscar</string>
     <string name="textView2">Caso tiver Erro de Sql, tera resposta aqui</string>
-
 </resources>

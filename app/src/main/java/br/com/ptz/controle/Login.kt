@@ -7,10 +7,8 @@ import android.support.design.widget.Snackbar
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
-import br.com.ptz.controle.sistema.ConectDBAcontrole
 import br.com.ptz.controle.sistema.SistemaMainActivity
 import java.sql.*
-import java.sql.DriverManager.getConnection
 import java.util.*
 
 // Variáveis Constante declaradas
@@ -22,9 +20,9 @@ class Login : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        ConectDBAcontrole()
 
-        getConnection()
+
+
         // execute the query via connection object
         //executeMySQLQuery()
 
@@ -85,7 +83,6 @@ class Login : AppCompatActivity() {
         if(MSGemail == "teste"){
             // Chamar tela sistema e print "SUCESSO ACESSAR O SISTEMA"
             Toast.makeText(this, "Login com SUCESSO vamos para tela Sistema", Toast.LENGTH_LONG).show()
-            ConectDBAcontrole()
 
             getConnection()
             // execute the query via connection object
