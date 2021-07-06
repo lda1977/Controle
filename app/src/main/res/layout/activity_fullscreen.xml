@@ -8,6 +8,8 @@
     android:theme="@style/ThemeOverlay.Controle.FullscreenContainer"
     tools:context=".FullscreenActivity">
 
+
+
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->

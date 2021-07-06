@@ -16,6 +16,7 @@ import br.com.ptz.controle.databinding.ActivityFullscreenBinding
 
 class FullscreenActivity : AppCompatActivity() {
 
+
     private lateinit var binding: ActivityFullscreenBinding
     private lateinit var fullscreenContent: TextView
     private lateinit var fullscreenContentControls: LinearLayout
