@@ -16,6 +16,10 @@ import br.com.ptz.controle.R
 import java.sql.DriverManager
 
 
+
+
+
+
 class SistemaMainActivity : AppCompatActivity() {
 
     // Variáveis Local
@@ -101,7 +105,7 @@ class SistemaMainActivity : AppCompatActivity() {
                 Class.forName("com.mysql.jdbc.Driver")
                 val connection = DriverManager.getConnection("jdbc:mysql://192.168.1.164:3306/fornecedor", "andro", "andro")
                 val statement = connection.createStatement()
-                val resultSet = statement.executeQuery("SELECT * FROM fornecedor.user")
+                val resultSet = statement.executeQuery("SELECT id, Email, Senha, Nome FROM fornecedor.user ORDER BY Nome;")
                 while (resultSet.next()) {
                     records += """${resultSet.getString(1)} ${resultSet.getString(2)} ${resultSet.getString(3)} ${resultSet.getString(4)}
 """
